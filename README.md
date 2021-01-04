@@ -5,7 +5,7 @@ système d'alerting sur les changements d'état des capteurs.
 
 ## Affichage
 
-![Onglet principal](https://raw.githubusercontent.com/tbagrel1/sensor_alert/tree/master/.readme_resources/OngletPrincipal.png)
+![Onglet principal](https://raw.githubusercontent.com/tbagrel1/sensor_alert/master/.readme_resources/OngletPrincipal.png)
 
 L'onglet principal présente la liste des capteurs en marche connectés à l'IoTLab et des informations générales.
 
