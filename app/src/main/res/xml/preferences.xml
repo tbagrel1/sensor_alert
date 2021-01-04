@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:key="vibration_category"
+        app:title="Vibration settings">
+        <SwitchPreference
+            app:defaultValue="true"
+            app:key="vibrate"
+            app:title="Vibrate when light status changes" />
+        <com.tbagrel1.sensoralert.custompreferences.TimePickerPreference
+            app:defaultValue="00:00"
+            app:key="vibration_begin_hour"
+            app:summary="Will start vibrating after this hour"
+            app:title="From" />
+        <com.tbagrel1.sensoralert.custompreferences.TimePickerPreference
+            app:defaultValue="00:00"
+            app:key="vibration_end_hour"
+            app:summary="Will end vibrating after this hour"
+            app:title="To" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="notification_category"
+        app:title="Notification settings">
+        <SwitchPreference
+            app:defaultValue="true"
+            app:key="send_notification"
+            app:title="A notification will be sent when light status changes" />
+        <com.tbagrel1.sensoralert.custompreferences.TimePickerPreference
+            app:defaultValue="19:00"
+            app:key="notification_begin_hour"
+            app:summary="Will start sending notifications after this hour"
+            app:title="From" />
+        <com.tbagrel1.sensoralert.custompreferences.TimePickerPreference
+            app:defaultValue="23:00"
+            app:key="notification_end_hour"
+            app:summary="Will stop sending notifications after this hour"
+            app:title="To" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:defaultValue="true"
+        app:key="email_category"
+        app:title="Email settings">
+        <SwitchPreference
+            app:key="send_email"
+            app:title="An email will be sent when light status changes" />
+        <com.tbagrel1.sensoralert.custompreferences.TimePickerPreference
+            app:defaultValue="23:00"
+            app:key="email_begin_hour"
+            app:summary="Will start sending emails after this hour"
+            app:title="From" />
+        <com.tbagrel1.sensoralert.custompreferences.TimePickerPreference
+            app:defaultValue="06:00"
+            app:key="email_end_hour"
+            app:summary="Will stop sending emails after this hour"
+            app:title="To" />
+        <EditTextPreference
+            app:defaultValue="thomas.bagrel@telecomnancy.net"
+            app:dialogTitle="Email recipients separated by a semicolon"
+            app:key="email_recipients"
+            app:title="Email recipients"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            app:defaultValue="smtp.gmail.com"
+            app:dialogTitle="SMTP server host"
+            app:key="smtp_host"
+            app:title="SMTP Host"
+            app:useSimpleSummaryProvider="true" />
+        <com.tbagrel1.sensoralert.custompreferences.EditIntPreference
+            app:defaultValue="587"
+            app:dialogTitle="SMTP server port"
+            app:key="smtp_port"
+            app:maxValue="65535"
+            app:minValue="1"
+            app:title="SMTP Port"
+            app:useSimpleSummaryProvider="true" />
+        <SwitchPreference
+            app:key="use_starttls"
+            app:title="Use StartTLS for SMTP dialog" />
+        <EditTextPreference
+            app:defaultValue=""
+            app:dialogTitle="Username to authenticate on the SMTP server"
+            app:key="smtp_username"
+            app:title="SMTP Username"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            app:defaultValue=""
+            app:dialogTitle="Password to authenticate on the SMTP server"
+            app:key="smtp_password"
+            app:title="SMTP Password"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="sensors_category"
+        app:title="Sensors settings">
+        <com.tbagrel1.sensoralert.custompreferences.EditIntPreference
+            app:defaultValue="60"
+            app:dialogTitle="Duration in seconds between two readings"
+            app:key="refresh_rate"
+            app:maxValue="3600"
+            app:minValue="1"
+            app:title="Sensors refresh rate (seconds)"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            app:defaultValue="http://10.0.2.2:8080"
+            app:dialogTitle="Sensors API root URL"
+            app:key="api_root_url"
+            app:title="Sensors API root URL"
+            app:useSimpleSummaryProvider="true" />
+        <com.tbagrel1.sensoralert.custompreferences.EditIntPreference
+            app:defaultValue="250"
+            app:dialogTitle="Light switch threshold"
+            app:key="light_switch_threshold"
+            app:maxValue="1000"
+            app:minValue="0"
+            app:title="Light switch threshold"
+            app:useSimpleSummaryProvider="true" />
+        <com.tbagrel1.sensoralert.custompreferences.EditIntPreference
+            app:defaultValue="7"
+            app:dialogTitle="How long should the data be kept?"
+            app:key="keep_data_for"
+            app:maxValue="3650"
+            app:minValue="1"
+            app:title="Data conservation period"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

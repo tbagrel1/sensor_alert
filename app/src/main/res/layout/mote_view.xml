@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:rttv="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.tbagrel1.sensoralert.viewmodels.MoteViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bordered">
+
+        <ImageView
+            android:id="@+id/light_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="Indicates whether this light is on or off"
+            android:src="@{viewModel.lightIconResource}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mote_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@{viewModel.moteDisplayedName}"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/light_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mote_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@{viewModel.moteId}"
+            android:textSize="12sp"
+            android:visibility="@{viewModel.moteIdVisibility}"
+            app:layout_constraintStart_toEndOf="@+id/light_icon"
+            app:layout_constraintTop_toBottomOf="@+id/mote_name" />
+
+        <ImageView
+            android:id="@+id/alias_button"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/mote_name"
+            app:layout_constraintStart_toEndOf="@+id/mote_name"
+            app:layout_constraintTop_toTopOf="@+id/mote_name"
+            app:srcCompat="@drawable/edit" />
+
+        <TextView
+            android:id="@+id/value_value"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{viewModel.valueString}"
+            app:layout_constraintStart_toStartOf="@+id/updated_value"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.github.curioustechizen.ago.RelativeTimeTextView
+            android:id="@+id/updated_value"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            rttv:reference_time="@{viewModel.updatedAt}" />
+
+        <TextView
+            android:id="@+id/value_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="value:"
+            app:layout_constraintStart_toStartOf="@+id/updated_label"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/updated_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="updated: "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/updated_value" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
