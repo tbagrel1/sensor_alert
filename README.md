@@ -31,6 +31,8 @@ Il est possible d'obtenir l'historique des luminosités enregistrées pour un ca
 L'historique se présente sous forme d'un graphique, il expose tout les niveaux de luminosité relevés
 par un capteur lors des dernières 24 heures. Il s'obtient en cliquant sur un capteur.
 
+![Graph](https://raw.githubusercontent.com/tbagrel1/sensor_alert/master/.readme_resources/Graph.png)
+
 En bas à gauche de l'écran on trouve la durée depuis la mise à jour la plus récente.
 En bas à droite de l'écran on trouve l'état de la dernière mise à jour :
 + "success" si la dernière mise à jour a été possible.

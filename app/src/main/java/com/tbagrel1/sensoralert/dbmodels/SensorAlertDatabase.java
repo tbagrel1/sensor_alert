@@ -10,7 +10,7 @@ import androidx.room.TypeConverters;
 /**
  * Singleton class representing the SQLite database handle.
  */
-@Database(entities = {Reading.class, LightDataPoint.class, MoteAlias.class}, version = 4)
+@Database(entities = {Reading.class, LightDataPoint.class, MoteAlias.class}, version = 5)
 @TypeConverters({OffsetDateTimeTypeConverter.class})
 public abstract class SensorAlertDatabase extends RoomDatabase {
     public static final String DATABASE_NAME = "sensor_alert";
