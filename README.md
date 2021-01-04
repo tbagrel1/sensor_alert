@@ -5,13 +5,13 @@ système d'alerting sur les changements d'état des capteurs.
 
 ## Affichage
 
-L'onglet principal présente la liste des capteurs en connectés à l'IoTLab ainsi que des informations générales.
+L'onglet principal présente la liste des capteurs connectés à l'IoTLab ainsi que des informations générales.
 
 ![Onglet principal](https://raw.githubusercontent.com/tbagrel1/sensor_alert/master/.readme_resources/OngletPrincipal.png)
 
 Chaque capteur est représenté sur une ligne avec différentes informations (de gauche à droite):
 
-+ Lumière allumé ou éteinte :
++ Lumière allumée ou éteinte :
     - ampoule allumée : luminosité de la pièce au dessus du seuil fixé
     - ampoule éteinte :  luminosité de la pièce en dessous du seuil fixé
 + Nom du capteur et/ou identifiant du capteur
@@ -22,7 +22,7 @@ Chaque capteur est représenté sur une ligne avec différentes informations (de
 
 + Le bouton permettant de nommer un capteur
 (remarque : lorsqu'un capteur est nommé son identifiant reste affiché en plus petit en dessous du
-nouveau nom. Le nouveau nom du capteur sera égalment utilisé lors des alertes par notification et par email)
+nouveau nom. Le nouveau nom du capteur sera également utilisé lors des alertes par notification et par email)
 
 ![Renommage capteur](https://raw.githubusercontent.com/tbagrel1/sensor_alert/master/.readme_resources/RenommageCapteur.png)
 
@@ -31,7 +31,7 @@ nouveau nom. Le nouveau nom du capteur sera égalment utilisé lors des alertes 
 
 Il est possible d'obtenir l'historique des luminosités enregistrées pour un capteur donné.
 L'historique se présente sous forme d'un graphique, il expose tout les niveaux de luminosité relevés
-par un capteur lors des dernières 24 heures (au plus). Il s'obtient en cliquant sur la tuile d'un capteur (à n'importe endroit sauf sur le bouton de nommage).
+par un capteur lors des dernières 24 heures (au plus). Il s'obtient en cliquant sur la tuile d'un capteur (à n'importe quel endroit sauf sur le bouton de nommage).
 
 ![Graph](https://raw.githubusercontent.com/tbagrel1/sensor_alert/master/.readme_resources/Graph.png)
 
