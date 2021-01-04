@@ -18,6 +18,8 @@ Chaque capteur est représenté sur une ligne avec différentes informations (de
 
 ![Capteurs](https://raw.githubusercontent.com/tbagrel1/sensor_alert/master/.readme_resources/CapteurAllumeCapteurEteint.png)
 
+**Remarque** : Il est possible de forcer le rafraîchissement des données en faisant passer l'application en arrière-plan puis à nouveau en premier plan, par exemple, en pressant deux fois le bouton carré de la barre Android.
+
 + Le bouton permettant de nommer un capteur
 (remarque : lorsqu'un capteur est nommé son identifiant reste affiché en plus petit en dessous du
 nouveau nom. Le nouveau nom du capteur sera égalment utilisé lors des alertes par notification et par email)
