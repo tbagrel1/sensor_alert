@@ -5,11 +5,9 @@ système d'alerting sur les changements d'état des capteurs.
 
 ## Affichage
 
-![Onglet principal](https://raw.githubusercontent.com/tbagrel1/sensor_alert/master/.readme_resources/OngletPrincipal.png)
-
 L'onglet principal présente la liste des capteurs en marche connectés à l'IoTLab et des informations générales.
 
-![Capteurs](https://raw.githubusercontent.com/tbagrel1/sensor_alert/tree/master/.readme_resources/CapteurAllumeCapteurEteint.jpeg?raw=true)
+![Onglet principal](https://raw.githubusercontent.com/tbagrel1/sensor_alert/master/.readme_resources/OngletPrincipal.png)
 
 Chaque capteur est représenté sur une ligne avec différentes informations (de gauche à droite):
 + Lumière allumé ou éteinte :
@@ -17,11 +15,14 @@ Chaque capteur est représenté sur une ligne avec différentes informations (de
     - ampoule éteinte :  luminosité de la pièce en dessous du seuil
 + Identifiant/nom du capteur (par défaut son adresse)
 
-![Renommage capteur](https://raw.githubusercontent.com/tbagrel1/sensor_alert/tree/master/.readme_resources/RenommageCapteur.png?raw=true)
+![Capteurs](https://raw.githubusercontent.com/tbagrel1/sensor_alert/tree/master/.readme_resources/CapteurAllumeCapteurEteint.png)
 
 + Le bouton permettant de modifier l'identifiant/nom du capteur
 (remarque : lorsqu'un capteur est renommé son identifiant reste affiché en plus petit en dessous du
 nouveau nom. Le nouveu nom du capteur sera celui utilisé lors des alertes par notification et par mail.)
+
+![Renommage capteur](https://raw.githubusercontent.com/tbagrel1/sensor_alert/tree/master/.readme_resources/RenommageCapteur.png)
+
 + Le niveau de luminosité relevé par le capteur
 + Le temps écoulé depuis la dernière mise à jour du capteur
 
@@ -30,12 +31,12 @@ Il est possible d'obtenir l'historique des luminosités enregistrées pour un ca
 L'historique se présente sous forme d'un graphique, il expose tout les niveaux de luminosité relevés
 par un capteur lors des dernières 24 heures. Il s'obtient en cliquant sur un capteur.
 
-![Indications generales](https://raw.githubusercontent.com/tbagrel1/sensor_alert/tree/master/.readme_resources/IndicateursGenerales.png?raw=true)
-
 En bas à gauche de l'écran on trouve la durée depuis la mise à jour la plus récente.
 En bas à droite de l'écran on trouve l'état de la dernière mise à jour :
 + "success" si la dernière mise à jour a été possible.
 + "failure" sinon.
+
+![Indications generales](https://raw.githubusercontent.com/tbagrel1/sensor_alert/tree/master/.readme_resources/IndicateursGenerales.png)
 
 ## Alerting
 
@@ -50,33 +51,31 @@ Le contient les informations suivantes : le nom (si définit) et l'identifiant d
 
 ## Export des données
 
-![Export](https://raw.githubusercontent.com/tbagrel1/sensor_alert/tree/master/.readme_resources/Export.png?raw=true)
-
 Le menu "export" est accessible en haut à droite de l'écran.
 Il permet d'envoyer les données des capteurs pour une période définis.
 Les données seront envoyées par mail à l'adresse mail renseignée, au format JSON.
+
+![Export](https://raw.githubusercontent.com/tbagrel1/sensor_alert/tree/master/.readme_resources/Export.png)
 
 ## Préférence
 
 Le menu "préférences" est accessible en haut à droite de l'écran.
 Il permet de configurer les fonctionnalités décrites ci dessus en définissant:
 
-![Preference vibration](https://raw.githubusercontent.com/tbagrel1/sensor_alert/tree/master/.readme_resources/PreferenceVibration.png?raw=true)
-
 + la plage horaire pendant laquelle une vibration sera produite en cas de changement d'état d'un
 capteur.
 
-![Preference notification](https://raw.githubusercontent.com/tbagrel1/sensor_alert/tree/master/.readme_resources/PreferenceNotification.png?raw=true)
+![Preference vibration](https://raw.githubusercontent.com/tbagrel1/sensor_alert/tree/master/.readme_resources/PreferenceVibration.png)
 
 + la plage horaire pendant laquelle une notification sera émise en cas de changement d'état d'un
 capteur.
 
-![Preference mail](https://raw.githubusercontent.com/tbagrel1/sensor_alert/tree/master/.readme_resources/PreferenceMail.png?raw=true)
+![Preference notification](https://raw.githubusercontent.com/tbagrel1/sensor_alert/tree/master/.readme_resources/PreferenceNotification.png)
 
 + la plage horaire pendant laquelle un mail sera envoyé en cas de changement d'état d'un capteur.
 + les adresses mail auxquelles seront envoyées l'alerte de changement d'état d'un capteur
 
-![Preference SMTP](https://raw.githubusercontent.com/tbagrel1/sensor_alert/tree/master/.readme_resources/PreferenceSMTP.png?raw=true)
+![Preference mail](https://raw.githubusercontent.com/tbagrel1/sensor_alert/tree/master/.readme_resources/PreferenceMail.png)
 
 + la information de connexion à l'hôte SMTP
     - nom de l'hôte SMTP (par défaut : gmail.com)
@@ -86,13 +85,14 @@ capteur.
     - mot de passe du compte mail envoyant les alertes et les données exportées
 (Remarque : un compte SMTP sera fournit à l'évaluateur hors du readme)
 
-![Préférence générale](https://raw.githubusercontent.com/tbagrel1/sensor_alert/tree/master/.readme_resources/PreferenceGenerale.png?raw=true)
+![Preference SMTP](https://raw.githubusercontent.com/tbagrel1/sensor_alert/tree/master/.readme_resources/PreferenceSMTP.png)
 
 + la fréquence de raffraichissement des données (limitation android)
 + l'adresse de l'hôte de l'API
 + le temps de conservation des données, ce qui limite la période d'affichage des données dans lors d'un export.
 + le seuil de luminosité au dessus duquel une lumière sera considérée comme allumée.
 
+![Préférence générale](https://raw.githubusercontent.com/tbagrel1/sensor_alert/tree/master/.readme_resources/PreferenceGenerale.png)
 
 ## Scnénario de test avec l'IOT Lab Mock API
 
