@@ -36,7 +36,7 @@ En bas à droite de l'écran on trouve l'état de la dernière mise à jour :
 + "success" si la dernière mise à jour a été possible.
 + "failure" sinon.
 
-![Indications generales](https://raw.githubusercontent.com/tbagrel1/sensor_alert/master/.readme_resources/IndicateursGenerales.png)
+![Indications generales](https://raw.githubusercontent.com/tbagrel1/sensor_alert/master/.readme_resources/IndicationsGenerales.png)
 
 ## Alerting
 
