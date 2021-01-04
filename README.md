@@ -75,6 +75,9 @@ capteur.
 ![Preference notification](https://raw.githubusercontent.com/tbagrel1/sensor_alert/master/.readme_resources/PreferenceNotification.png)
 
 + la plage horaire pendant laquelle un mail sera envoyé en cas de changement d'état d'un capteur.
+
+(Remarque : Pour activer un des modes d'alerting en permanence il faut mettre sa plage horraire de 0h00 à 0h00)
+
 + les adresses mail auxquelles seront envoyées l'alerte de changement d'état d'un capteur
 
 ![Preference mail](https://raw.githubusercontent.com/tbagrel1/sensor_alert/master/.readme_resources/PreferenceMail.png)
